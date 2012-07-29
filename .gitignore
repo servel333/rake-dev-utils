@@ -2,6 +2,7 @@
 ## Project ignores
 
 local/*
+ignore
 
 ## Ruby ignores
 

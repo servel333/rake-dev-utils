@@ -1,8 +1,6 @@
 
-Dir.glob( 'lib/*.rb' ) do |file|
-    require_relative file
-end
-
-Dir.glob( 'local/*.rb' ) do |file|
-    require_relative file
+%w(  lib  local  ).each do |dir|
+    Dir.glob( File.join( File.dirname( __FILE__ ), dir, "*.rb" ) ) do |file|
+        require file
+    end
 end
